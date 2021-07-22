@@ -1,0 +1,20 @@
+{
+  "name": "recipe-scraper",
+  "version": "1.0.0",
+  "description": "This is a package for scraping recipes from urls",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rethora/recipe-scraper.git"
+  },
+  "author": "Dane Roelofs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rethora/recipe-scraper/issues"
+  },
+  "homepage": "https://github.com/Rethora/recipe-scraper#readme"
+}
