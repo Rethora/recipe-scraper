@@ -1,5 +1,5 @@
 {
-  "name": "recipe-scraper",
+  "name": "rethora-recipe-scraper",
   "version": "1.0.0",
   "description": "This is a package for scraping recipes from urls",
   "main": "index.js",
