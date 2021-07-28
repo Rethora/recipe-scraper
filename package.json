@@ -4,7 +4,7 @@
   "description": "This is a package for scraping recipes from urls",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "mocha --timeout 10000 tests.js",
     "start": "node index.js"
   },
   "repository": {
@@ -16,5 +16,13 @@
   "bugs": {
     "url": "https://github.com/Rethora/recipe-scraper/issues"
   },
-  "homepage": "https://github.com/Rethora/recipe-scraper#readme"
+  "homepage": "https://github.com/Rethora/recipe-scraper#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.10"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^9.0.3"
+  }
 }
