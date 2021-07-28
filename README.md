@@ -12,26 +12,20 @@ or...
 
 and require like so:  
 `const {ScrapeUrls, ScrapeRecipes} = require('rethora-recipe-scraper')`  
-or...  
-`const myCustomVariableName = require('rethora-recipe-scraper').RecipeScaper`
 
-### Scraping Urls by PageUrl
+### Scraping Urls by Page Url
 
-With supported pages you can use ScrapeUrls (which excepts single url parameter) to retrieve an array of urls that link to recipe pages. Returns a promise.  
+With supported pages you can use ScrapeUrls with a string parameter (website url) to retrieve an array of urls that link to recipe pages. Returns a promise.  
 
 ### Scraping Recipes by Url
 
-With ScrapeRecipes (which excepts a single url OR an array of urls) and returns an object of arrays for recipes in json format. Returns a promise.  
+With ScrapeRecipes you can pass a string or array of urls. This returns an object with properties "success" and "skipped". The success property will contain an array of objects of recipes that were successfully scraped. Skipped is an array of urls the scraper was passed but could not get a recipe. Returns a promise.  
 
 ## Example Code Snippets  
 
 ### Requiring The Module
 ```
 const { ScrapeUrls, ScrapeRecipes } = require('rethora-recipe-scraper);  
-
-OR  
-
-const myCustomVarName = require('rethora-recipe-scraper).ScrapeRecipes;
 ```
 
 ### Fetching Urls From Page by Category  
@@ -158,8 +152,10 @@ Please report any bugs or functionality issues found to "https://github.com/Reth
 
 ### Scripts
 
-`npm start` will execute index.js
-`npm test` will execute tests.js
+`npm start`  
+will execute index.js
+`npm test`  
+will execute tests.js
 
 ## Supported Pages (so far...)
 
