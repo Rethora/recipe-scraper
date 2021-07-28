@@ -153,7 +153,9 @@ Please report any bugs or functionality issues found to "https://github.com/Reth
 ### Scripts
 
 `npm start`  
-will execute index.js
+
+will execute index.js  
+
 `npm test`  
 will execute tests.js
 
