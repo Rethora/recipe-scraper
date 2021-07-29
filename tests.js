@@ -30,6 +30,13 @@ describe('allrecipes.com', () => {
             assert.isArray(res);
             assert.isEmpty(res);
         });
+
+        it('should not scrape urls from recipe page', async () => {
+            const url = 'https://www.allrecipes.com/recipe/267255/air-fryer-brussels-sprouts/';
+            const res = await ScrapeUrls(url);
+            assert.isArray(res);
+            assert.isEmpty(res)
+        });
     });
 
     context('ScrapeRecipes()', () => {
@@ -96,6 +103,13 @@ describe('cookinglight.com', () => {
             assert.isArray(res);
             assert.isNotEmpty(res);
         });
+
+        it('should not scrape urls from recipe page', async () => {
+            const url = 'https://www.cookinglight.com/eating-smart/low-carb-pasta-salad-ideas-from-a-dietitian';
+            const res = await ScrapeUrls(url);
+            assert.isArray(res);
+            assert.isEmpty(res);
+        });
     });
 
     context('ScrapeRecipes()', () => {
@@ -155,6 +169,13 @@ describe('eatingwell.com', () => {
             assert.isArray(res);
             assert.isNotEmpty(res);
         });
+
+        it('should not scrape recipes from recipe page', async () => {
+            const url = 'https://www.eatingwell.com/recipe/256507/spaghetti-squash-with-roasted-tomatoes-beans-almond-pesto/';
+            const res = await ScrapeUrls(url);
+            assert.isArray(res);
+            assert.isEmpty(res);
+        });
     });
 
     context('ScrapeRecipes()', () => {
@@ -210,6 +231,13 @@ describe('myrecipes.com', () => {
                 assert.isArray(r);
                 assert.isNotEmpty(r);
             });
+        });
+
+        it('should not scrape urls from recipe page', async () => {
+            const url = 'https://www.myrecipes.com/recipe/grilled-stuffed-jalapenos';
+            const res = await ScrapeUrls(url);
+            assert.isArray(res);
+            assert.isEmpty(res);
         });
     });
 
@@ -285,6 +313,13 @@ describe('skinnytaste.com', () => {
                 assert.isEmpty(r);
             });
         });
+
+        it('should not scrape urls from recipe page', async () => {
+            const url = 'https://www.skinnytaste.com/low-fat-strawberry-scones/';
+            const res = await ScrapeUrls(url);
+            assert.isArray(res);
+            assert.isEmpty(res);
+        });
     });
 
     context('ScrapeRecipes()', () => {
@@ -349,6 +384,13 @@ describe('joyfulhealthyeats.com', () => {
                 assert.isNotEmpty(r);
             });
         });
+
+        it('should not scrape urls from recipe page', async () => {
+            const url = 'https://www.joyfulhealthyeats.com/banana-bread-chocolate-chip-oatmeal-bars/';
+            const res = await ScrapeUrls(url);
+            assert.isArray(res);
+            assert.isEmpty(res);
+        });
     });
 
     context('ScrapeRecipes()', () => {
@@ -411,6 +453,13 @@ describe('healthyfitnessmeal.com', () => {
                 assert.isArray(r);
                 assert.isNotEmpty(r);
             });
+        });
+
+        it('should not scrape urls from recipe page', async () => {
+            const url = 'https://healthyfitnessmeals.com/mediterranean-chicken-skillet/';
+            const res = await ScrapeUrls(url);
+            assert.isArray(res);
+            assert.isEmpty(res);
         });
     });
 
