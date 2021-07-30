@@ -8,7 +8,7 @@ const getPageHtml = async url => {
         const { data } = await axios.get(url);
         return cheerio.load(data);
     } catch (error) {
-        console.error(error);
+        // console.error(error);
         throw error;
     }
 };

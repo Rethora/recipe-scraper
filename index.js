@@ -15,7 +15,7 @@ const ScrapeUrls = async url => {
         const urls = scraper(pageHtml);
         return urls;
     } catch (error) {
-        console.error(error);
+        // console.error(error);
         throw error;
     }
 };
@@ -35,7 +35,7 @@ const ScrapeRecipes = async urls => {
             const recipe = scraper(pageHtml, url);
             return recipe;
         } catch (error) {
-            console.error(error);
+            // console.error(error);
             throw error;
         }
     };
@@ -60,11 +60,9 @@ const ScrapeRecipes = async urls => {
             return res;
         })
         .catch(error => {
-            console.error(error);
+            // console.error(error);
             throw error;
         });
 };
-
-ScrapeRecipes('https://healthyfitnessmeals.com/mediterranean-chicken-skillet/#recipe');
 
 module.exports = { ScrapeUrls, ScrapeRecipes };
