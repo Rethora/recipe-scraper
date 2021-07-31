@@ -49,9 +49,8 @@ module.exports = (html, url) => {
         if (key === 'cook time') parse.cookMin(value);
         if (key === 'total time') parse.totalMin(value);
         if (key === 'yield') {
-            const serve = value.match(/\d+/)[0];
-            if (serve) parse.servings(serve);
-            // parse.servings(value.match(/\d/)[0])
+            const serve = value.match(/\d+/);
+            if (serve) parse.servings(serve[0]);
         };
         if (key === 'category') tags.push(value);
         if (key === 'method') tags.push(value);
