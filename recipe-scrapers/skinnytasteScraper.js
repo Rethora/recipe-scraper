@@ -7,6 +7,11 @@ module.exports = (html, url) => {
 
     parse.url(url);
     parse.name($('h2.wprm-recipe-name').text());
+
+    let des = $('div.wprm-recipe-summary > span').text();
+    if (!des) des = $('div.wprm-recipe-summary').text();
+    parse.description(des);
+
     parse.description($('div.wprm-recipe-summary > span').text());
 
     const ing = [];
