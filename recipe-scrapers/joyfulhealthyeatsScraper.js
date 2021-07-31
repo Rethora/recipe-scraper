@@ -48,7 +48,11 @@ module.exports = (html, url) => {
         if (key === 'prep time') parse.prepMin(value);
         if (key === 'cook time') parse.cookMin(value);
         if (key === 'total time') parse.totalMin(value);
-        if (key === 'yield') parse.servings(value.match(/\d/)[0]);
+        if (key === 'yield') {
+            const serve = value.match(/\d+/)[0];
+            if (serve) parse.servings(serve);
+            // parse.servings(value.match(/\d/)[0])
+        };
         if (key === 'category') tags.push(value);
         if (key === 'method') tags.push(value);
         if (key === 'cuisine') tags.push(value);
@@ -57,6 +61,8 @@ module.exports = (html, url) => {
     if (tags.length > 0) parse.tags(tags);
 
     parse.image($('header.tasty-recipes-entry-header > div.tasty-recipes-image > img').attr('data-pin-media'));
+
+    console.log(parse.recipe())
 
     return parse.recipe();
 }
