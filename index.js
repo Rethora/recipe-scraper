@@ -10,8 +10,10 @@ const ScrapeUrls = async url => {
         const urlhelper = new UrlHelper(url);
         const base = urlhelper.getBase();
         const scraper = new Scraper(base, type).getScraper();
-        if (!scraper) throw new Error(`No supported scrapper for ${url}. Check out "https://www.npmjs.com/package/rethora-recipe-scraper" for supported pages.`);
+        // if (!scraper) throw new Error(`No supported scrapper for ${url}. Check out "https://www.npmjs.com/package/rethora-recipe-scraper" for supported pages.`);
+        if (!scraper) return [];
         const pageHtml = await getPageHtml(url);
+        if (!pageHtml) return [];
         const urls = scraper(pageHtml);
         return urls;
     } catch (error) {
