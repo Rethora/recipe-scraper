@@ -12,10 +12,6 @@ module.exports = (html, url) => {
     if (!des) des = $('div.wprm-recipe-summary > span').text();
     parse.description(des);
 
-    console.log($('div.wprm-recipe-summary').text())
-
-    parse.description($('div.wprm-recipe-summary > span').text());
-
     const ing = [];
     $('ul.wprm-recipe-ingredients > li.wprm-recipe-ingredient').each((i, el) => ing.push($(el).text()));
     parse.ingredients(ing);
