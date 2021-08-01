@@ -8,9 +8,11 @@ module.exports = (html, url) => {
     parse.url(url);
     parse.name($('h2.wprm-recipe-name').text());
 
-    let des = $('div.wprm-recipe-summary > span').text();
-    if (!des) des = $('div.wprm-recipe-summary').text();
+    let des = $('div.wprm-recipe-summary').text();
+    if (!des) des = $('div.wprm-recipe-summary > span').text();
     parse.description(des);
+
+    console.log($('div.wprm-recipe-summary').text())
 
     parse.description($('div.wprm-recipe-summary > span').text());
 
