@@ -1,6 +1,6 @@
 {
   "name": "rethora-recipe-scraper",
-  "version": "1.0.9",
+  "version": "1.1.0",
   "description": "This is a package for scraping recipes from urls",
   "main": "index.js",
   "scripts": {
@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/Rethora/recipe-scraper#readme",
   "dependencies": {
+    "@supercharge/promise-pool": "^1.7.0",
     "axios": "^0.21.1",
     "cheerio": "^1.0.0-rc.10"
   },

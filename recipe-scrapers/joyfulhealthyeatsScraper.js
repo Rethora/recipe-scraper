@@ -61,7 +61,5 @@ module.exports = (html, url) => {
 
     parse.image($('header.tasty-recipes-entry-header > div.tasty-recipes-image > img').attr('data-pin-media'));
 
-    console.log(parse.recipe())
-
     return parse.recipe();
 }
